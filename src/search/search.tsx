@@ -12,29 +12,33 @@ class Search extends React.Component<any> {
   }
 
   handleSubmit = () => {
-    const { title }: any = this.state;
-    this.props.handleSendRequest(title);
-    this.setState({ title: '' });
+    const { expression }: any = this.state;
+    if (expression) {
+      this.props.handleSendRequest(expression);
+      this.setState({ expression: '' });
+    }
+    return;
   };
 
-  handleInputTitle = (event: any) => {
+  handleInputExpression = (event: any) => {
     event.preventDefault();
-    const title = event.target.value;
-    this.setState({ title });
+    const expression = event.target.value;
+    this.setState({ expression });
   };
 
   render() {
-    const { title }: any = this.state;
+    const { expression }: any = this.state;
     return (
       <div className="search">
         <TextField
-          id="standard-basic"
+          id="standard-secondary"
           className="search-box"
+          color="secondary"
           label="Search for a movie"
-          onChange={this.handleInputTitle}
-          value={title}
+          onChange={this.handleInputExpression}
+          value={expression}
         />
-        <Button variant="contained" color="default" onClick={this.handleSubmit}>
+        <Button size="large" variant="contained" color="secondary" onClick={this.handleSubmit}>
           Search
         </Button>
       </div>

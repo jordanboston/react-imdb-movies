@@ -3,14 +3,13 @@ import './App.css';
 import HttpClient from './utils/HttpClient';
 import { API_KEY } from './config';
 import Container from '@material-ui/core/Container';
-import Movie from './movie/movie';
+import Movies from './movies/movies';
 import Search from './search/search';
 
 interface Props { }
 interface State {
   movies: [];
 }
-
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props as any);
@@ -20,11 +19,10 @@ class App extends React.Component<Props, State> {
     };
   }
 
-  getMovie = async (title: string) => {
-    const request = HttpClient.get(`/en/API/Search/${API_KEY}/${title}`)
+  getMovie = async (expression: string) => {
+    const request = HttpClient.get(`/en/API/Search/${API_KEY}/${expression}`)
       .then((response) => {
         if (response) {
-          console.log('Response', response);
           const movies: any = response.results;
           this.setState({ movies });
         }
@@ -42,9 +40,7 @@ class App extends React.Component<Props, State> {
         <Container maxWidth="lg" style={{ margin: '0 auto' }}>
           <Search handleSendRequest={this.getMovie} />
 
-          {this.state.movies.map(({ id, ...movie }: any) => {
-            return <Movie key={id} {...movie} />;
-          })}
+          <Movies movies={this.state.movies} />
         </Container>
       </div>
     );
@@ -52,3 +48,4 @@ class App extends React.Component<Props, State> {
 }
 
 export default App;
+// export default withStyles(useStyles,  { withTheme: true })(App);
