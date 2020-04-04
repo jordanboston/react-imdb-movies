@@ -1,4 +1,5 @@
-const baseURL = 'https://imdb-api.com'
+const corsAnywhere = 'https://cors-anywhere.herokuapp.com'
+const baseURL = `${corsAnywhere}/https://imdb-api.com`
 
 function get(path, params) {
   const url = baseURL + path
@@ -13,7 +14,6 @@ async function sendRequest(url, params = null, method = 'GET') {
       'Accept': 'application/json',
       'Content-Type': 'application/json',
       'Access-Control-Allow-Origin': '*',
-      'mode': 'no-cors'
     }
   };
 

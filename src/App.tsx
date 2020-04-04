@@ -8,7 +8,6 @@ import Search from './search/search';
 interface Props { }
 interface State {
   movies: [];
-  title: string;
 }
 class App extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -16,7 +15,6 @@ class App extends React.Component<Props, State> {
 
     this.state = {
       movies: [],
-      title: '',
     };
   }
 
