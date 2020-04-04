@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-imdb-movies/static/css/main.47fc86a3.chunk.css",
-    "main.js": "/react-imdb-movies/static/js/main.a33c7f62.chunk.js",
-    "main.js.map": "/react-imdb-movies/static/js/main.a33c7f62.chunk.js.map",
+    "main.css": "/react-imdb-movies/static/css/main.51adeb04.chunk.css",
+    "main.js": "/react-imdb-movies/static/js/main.33cb5866.chunk.js",
+    "main.js.map": "/react-imdb-movies/static/js/main.33cb5866.chunk.js.map",
     "runtime-main.js": "/react-imdb-movies/static/js/runtime-main.7c469ba1.js",
     "runtime-main.js.map": "/react-imdb-movies/static/js/runtime-main.7c469ba1.js.map",
-    "static/js/2.4f70941c.chunk.js": "/react-imdb-movies/static/js/2.4f70941c.chunk.js",
-    "static/js/2.4f70941c.chunk.js.map": "/react-imdb-movies/static/js/2.4f70941c.chunk.js.map",
+    "static/js/2.7decbbe7.chunk.js": "/react-imdb-movies/static/js/2.7decbbe7.chunk.js",
+    "static/js/2.7decbbe7.chunk.js.map": "/react-imdb-movies/static/js/2.7decbbe7.chunk.js.map",
     "index.html": "/react-imdb-movies/index.html",
-    "precache-manifest.b73035d2113dc015117d4e142f6b787c.js": "/react-imdb-movies/precache-manifest.b73035d2113dc015117d4e142f6b787c.js",
+    "precache-manifest.3d1de3d3c4fa3ac4b5342b4317f74bd7.js": "/react-imdb-movies/precache-manifest.3d1de3d3c4fa3ac4b5342b4317f74bd7.js",
     "service-worker.js": "/react-imdb-movies/service-worker.js",
-    "static/css/main.47fc86a3.chunk.css.map": "/react-imdb-movies/static/css/main.47fc86a3.chunk.css.map",
-    "static/js/2.4f70941c.chunk.js.LICENSE.txt": "/react-imdb-movies/static/js/2.4f70941c.chunk.js.LICENSE.txt"
+    "static/css/main.51adeb04.chunk.css.map": "/react-imdb-movies/static/css/main.51adeb04.chunk.css.map",
+    "static/js/2.7decbbe7.chunk.js.LICENSE.txt": "/react-imdb-movies/static/js/2.7decbbe7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7c469ba1.js",
-    "static/js/2.4f70941c.chunk.js",
-    "static/css/main.47fc86a3.chunk.css",
-    "static/js/main.a33c7f62.chunk.js"
+    "static/js/2.7decbbe7.chunk.js",
+    "static/css/main.51adeb04.chunk.css",
+    "static/js/main.33cb5866.chunk.js"
   ]
 }
