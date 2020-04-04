@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "516d2ec418358957a314803280028382",
+    "revision": "82c811c3b26223d5954449cd2b3fbb36",
     "url": "/react-imdb-movies/index.html"
   },
   {
-    "revision": "c37ac62cf491df40d4a4",
+    "revision": "7be472956b4caff092c1",
     "url": "/react-imdb-movies/static/css/main.22e82b57.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-imdb-movies/static/js/2.2e4ee336.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c37ac62cf491df40d4a4",
-    "url": "/react-imdb-movies/static/js/main.e9267533.chunk.js"
+    "revision": "7be472956b4caff092c1",
+    "url": "/react-imdb-movies/static/js/main.8dd229be.chunk.js"
   },
   {
     "revision": "eb52336c71b42ce21eef",
