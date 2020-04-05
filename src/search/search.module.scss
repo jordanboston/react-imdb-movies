@@ -1,6 +1,17 @@
 .search {
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  min-width: 60%;
+  max-width: 80%;
   margin: 3% auto;
+}
+
+.searchBar {
+  box-shadow: -8px 7px 10px -9px grey;
+  margin-bottom: 1rem;
+}
+
+.disabled {
+  pointer-events: none;
+  background: whitesmoke;
 }

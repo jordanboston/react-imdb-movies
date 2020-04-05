@@ -5,14 +5,16 @@ import Button from 'react-bootstrap/Button';
 // import styles from './movies.module.scss';
 
 interface Movie {
-  id: number;
+  id: string;
   title: string;
   image: string;
   description: string;
 }
+interface Props {
+  movies: [];
+}
 
-const Movies = (props: any) => {
-
+const Movies = (props: Props) => {
   return (
     <React.Fragment>
       {props.movies.map(({ id, title, image, description }: Movie) => (
