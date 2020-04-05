@@ -1,11 +1,8 @@
 import React from 'react';
-import { Theme, createStyles, makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
+import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+// import styles from './movies.module.scss';
 
 interface Movie {
   id: number;
@@ -14,53 +11,25 @@ interface Movie {
   description: string;
 }
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'space-around',
-      overflow: 'hidden',
-      backgroundColor: theme.palette.background.paper,
-    },
-    gridList: {
-      width: 500,
-      height: 650,
-    },
-    gridTile: {
-
-    },
-    icon: {
-      color: 'rgba(255, 255, 255, 0.54)',
-    },
-  })
-);
-
 const Movies = (props: any) => {
-  const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <GridList cellHeight={200} className={classes.gridList}>
-        <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-          <ListSubheader component="div"></ListSubheader>
-        </GridListTile>
-        {props.movies.map(({ id, title, image, description }: Movie) => (
-          <GridListTile key={id} className={classes.gridTile}>
-            <img src={image} alt="`{Title} movie poster`" />
-            <GridListTileBar
-              title={title}
-              subtitle={<span>{description}</span>}
-              actionIcon={
-                <IconButton aria-label={`info about ${title}`} className={classes.icon}>
-                  <InfoIcon />
-                </IconButton>
-              }
-            />
-          </GridListTile>
-        ))}
-      </GridList>
-    </div>
+    <React.Fragment>
+      {props.movies.map(({ id, title, image, description }: Movie) => (
+        <Col xs={12} sm={6} md={3} key={id}>
+          <Card className="bg-dark text-white">
+            <Card.Img src={image} variant="top" className="mb=5" alt="`{Title} movie poster`" />
+            <Card.ImgOverlay>
+              <Card.Text>
+                <Button variant="light">
+                  {title} {description}
+                </Button>
+              </Card.Text>
+            </Card.ImgOverlay>
+          </Card>
+        </Col>
+      ))}
+    </React.Fragment>
   );
 };
 

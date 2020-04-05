@@ -1,8 +1,9 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 import HttpClient from './utils/HttpClient';
 import { API_KEY } from './config';
-import Container from '@material-ui/core/Container';
 import Movies from './movies/movies';
 import Search from './search/search';
 
@@ -37,10 +38,13 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <div className="App">
-        <Container maxWidth="lg" style={{ margin: '0 auto' }}>
-          <Search handleSendRequest={this.getMovie} />
-
-          <Movies movies={this.state.movies} />
+        <Container fluid>
+          <Row>
+            <Search handleSendRequest={this.getMovie} />
+          </Row>
+          <Row>
+            <Movies movies={this.state.movies} />
+          </Row>
         </Container>
       </div>
     );
@@ -48,4 +52,3 @@ class App extends React.Component<Props, State> {
 }
 
 export default App;
-// export default withStyles(useStyles,  { withTheme: true })(App);
