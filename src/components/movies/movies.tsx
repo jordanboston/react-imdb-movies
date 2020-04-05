@@ -2,6 +2,7 @@ import React from 'react';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 // import styles from './movies.module.scss';
 
 interface Movie {
@@ -20,11 +21,13 @@ const Movies = (props: Props) => {
       {props.movies.map(({ id, title, image, description }: Movie) => (
         <Col xs={12} sm={6} md={3} key={id}>
           <Card className="bg-dark text-white">
-            <Card.Img src={image} variant="top" className="mb=5" alt="`{Title} movie poster`" />
+            <Card.Img src={image} variant="top" className="mb=5" alt={`{Title} movie poster`} />
             <Card.ImgOverlay>
               <Card.Text>
                 <Button variant="light">
-                  {title} {description}
+                  <Link to={`/movie/${id}`}>
+                    {title} {description}
+                  </Link>
                 </Button>
               </Card.Text>
             </Card.ImgOverlay>

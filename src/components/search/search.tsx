@@ -11,6 +11,7 @@ interface Props {
 interface State {
   expression: string;
 }
+
 class Search extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props as any);

@@ -1,7 +1,7 @@
 import React from 'react';
-import HttpClient from '../utils/HttpClient';
-import { API_KEY } from '../config';
-import DetailsModal from '../details-modal/details-modal';
+import HttpClient from '../../utils/HttpClient';
+import { API_KEY } from '../../config';
+// import DetailsModal from '../../components/details-modal/details-modal';
 
 interface Props { }
 interface State {
@@ -33,9 +33,10 @@ class MovieDetails extends React.Component<Props, State> {
     return request;
   };
 
-  // render() {
-  //   return <DetailsModal movieDetails={this.state.movieDetails} />;
-  // }
+  render() {
+    return <h1>I'm a movie</h1>;
+    // return <DetailsModal movieDetails={this.state.movieDetails} />;
+  }
 }
 
 export default MovieDetails;

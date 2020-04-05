@@ -1,12 +1,15 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 import './header.scss';
 
 const Header = () => {
   return (
     <Navbar bg="dark mb-3" variant="dark">
       <Navbar.Brand className="brand-font">
-        <h1>IMDB Movies</h1>
+        <Link to="/">
+          <h1>IMDB Movies</h1>
+        </Link>
       </Navbar.Brand>
     </Navbar>
   );
