@@ -12,7 +12,7 @@ class App extends React.Component {
         <Header />
 
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/react-imdb-movies/" component={Home} />
           <Route path="/movie/:id" component={MovieDetails} />
         </Switch>
       </div>

@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Navbar bg="dark mb-3" variant="dark">
       <Navbar.Brand className="brand-font">
-        <Link to="/">
+        <Link to="/react-imdb-movies/">
           <h1>IMDB Movie Info</h1>
         </Link>
       </Navbar.Brand>
