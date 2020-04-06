@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-imdb-movies/static/css/main.31206f67.chunk.css",
-    "main.js": "/react-imdb-movies/static/js/main.9d1587a8.chunk.js",
-    "main.js.map": "/react-imdb-movies/static/js/main.9d1587a8.chunk.js.map",
+    "main.js": "/react-imdb-movies/static/js/main.5ab14517.chunk.js",
+    "main.js.map": "/react-imdb-movies/static/js/main.5ab14517.chunk.js.map",
     "runtime-main.js": "/react-imdb-movies/static/js/runtime-main.7c469ba1.js",
     "runtime-main.js.map": "/react-imdb-movies/static/js/runtime-main.7c469ba1.js.map",
     "static/js/2.3717d0e9.chunk.js": "/react-imdb-movies/static/js/2.3717d0e9.chunk.js",
     "static/js/2.3717d0e9.chunk.js.map": "/react-imdb-movies/static/js/2.3717d0e9.chunk.js.map",
     "index.html": "/react-imdb-movies/index.html",
-    "precache-manifest.d026a9e6a615dfa8165dda60e7a33a60.js": "/react-imdb-movies/precache-manifest.d026a9e6a615dfa8165dda60e7a33a60.js",
+    "precache-manifest.79da4391e209e2f917cb96e3471c81f5.js": "/react-imdb-movies/precache-manifest.79da4391e209e2f917cb96e3471c81f5.js",
     "service-worker.js": "/react-imdb-movies/service-worker.js",
     "static/css/main.31206f67.chunk.css.map": "/react-imdb-movies/static/css/main.31206f67.chunk.css.map",
     "static/js/2.3717d0e9.chunk.js.LICENSE.txt": "/react-imdb-movies/static/js/2.3717d0e9.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7c469ba1.js",
     "static/js/2.3717d0e9.chunk.js",
     "static/css/main.31206f67.chunk.css",
-    "static/js/main.9d1587a8.chunk.js"
+    "static/js/main.5ab14517.chunk.js"
   ]
 }
