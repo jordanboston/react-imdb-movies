@@ -44,13 +44,13 @@ class Home extends React.Component<Props, State> {
     return request;
   };
 
-  // notice = () => {
-  //   return (
-  //     <Alert variant="warning" className="mx-auto">
-  //       Did not find anything in that search.
-  //     </Alert>
-  //   );
-  // };
+  notice = () => {
+    return (
+      <Alert variant="warning" className="mx-auto">
+        Did not find anything in that search.
+      </Alert>
+    );
+  };
 
   // searchResultComponent = () => {
   //   console.log(this.state.movies);
