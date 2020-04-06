@@ -1,5 +1,5 @@
 export interface movieDetailsInterface {
-  title?: string;
+  title: string;
   originalTitle?: string;
   fullTitle?: string;
   year?: string;

@@ -18,7 +18,9 @@ class MovieDetails extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props as any);
     this.state = {
-      movieDetails: {}
+      movieDetails: {
+        title: '',
+      }
     };
   }
 
@@ -45,25 +47,29 @@ class MovieDetails extends React.Component<Props, State> {
   };
 
   render() {
+    const {
+      image, title, plot, year, contentRating, imDbRating, metacriticRating, directors,
+      stars, languages, genres, tagline
+    } = this.state.movieDetails;
     return (
       <Card style={{ width: '25rem' }} className="mx-auto mt-3">
-        <Card.Img variant="top" src={this.state.movieDetails.image} />
+        <Card.Img variant="top" src={image} />
         <Card.Body>
-          <Card.Title>{this.state.movieDetails.title}</Card.Title>
-          <Card.Text>{this.state.movieDetails.plot}</Card.Text>
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{plot}</Card.Text>
         </Card.Body>
         <ListGroup className="list-group-flush">
-          <ListGroupItem>Year: {this.state.movieDetails.year}</ListGroupItem>
-          <ListGroupItem>Rated: {this.state.movieDetails.contentRating}</ListGroupItem>
-          <ListGroupItem>IMDB Rating: {this.state.movieDetails.imDbRating} </ListGroupItem>
+          <ListGroupItem>Year: {year}</ListGroupItem>
+          <ListGroupItem>Rated: {contentRating}</ListGroupItem>
+          <ListGroupItem>IMDB Rating: {imDbRating} </ListGroupItem>
           <ListGroupItem>
-            Meta Critic Rating: {this.state.movieDetails.metacriticRating}
+            Meta Critic Rating: {metacriticRating}
           </ListGroupItem>
-          <ListGroupItem>Directors: {this.state.movieDetails.directors}</ListGroupItem>
-          <ListGroupItem>Stars: {this.state.movieDetails.stars}</ListGroupItem>
-          <ListGroupItem>Languages: {this.state.movieDetails.languages}</ListGroupItem>
-          <ListGroupItem>Genres: {this.state.movieDetails.genres}</ListGroupItem>
-          <ListGroupItem>{this.state.movieDetails.tagline}</ListGroupItem>
+          <ListGroupItem>Directors: {directors}</ListGroupItem>
+          <ListGroupItem>Stars: {stars}</ListGroupItem>
+          <ListGroupItem>Languages: {languages}</ListGroupItem>
+          <ListGroupItem>Genres: {genres}</ListGroupItem>
+          <ListGroupItem>{tagline}</ListGroupItem>
         </ListGroup>
       </Card>
     );
