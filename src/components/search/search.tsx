@@ -58,7 +58,7 @@ class Search extends React.Component<Props, State> {
             onKeyDown={this.onEnterKeyDown}
             value={expression}
           />
-          <InputGroup.Append className={this.props.loading ? styles.disabled : ''}>
+          <InputGroup.Append>
             <Button variant="secondary" onClick={this.handleSubmit}>
               Search
             </Button>

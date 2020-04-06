@@ -1,0 +1,34 @@
+export interface movieDetailsInterface {
+  title?: string;
+  originalTitle?: string;
+  fullTitle?: string;
+  year?: string;
+  releaseDate?: string;
+  runtimeMins?: string;
+  runtimeStr?: string;
+  plot?: string;
+  plotLocal?: string;
+  plotLocalIsRtl?: boolean;
+  awards?: string;
+  image?: string;
+  type?: string;
+  directors?: string;
+  directorList?: object[];
+  writers?: string;
+  writerList?: object[];
+  stars?: string;
+  starList?: object[];
+  actorList?: object[];
+  genres?: string;
+  genreList?: object[];
+  languages?: string;
+  contentRating?: string;
+  imDbRating?: string;
+  imDbRatingVotes?: string;
+  metacriticRating?: string;
+  ratings?: object | null;
+  trailer?: object | null;
+  boxOffice?: object | null;
+  tagline?: string;
+  similars?: object[];
+}

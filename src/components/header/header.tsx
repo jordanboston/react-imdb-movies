@@ -8,7 +8,7 @@ const Header = () => {
     <Navbar bg="dark mb-3" variant="dark">
       <Navbar.Brand className="brand-font">
         <Link to="/">
-          <h1>IMDB Movies</h1>
+          <h1>IMDB Movie Info</h1>
         </Link>
       </Navbar.Brand>
     </Navbar>
