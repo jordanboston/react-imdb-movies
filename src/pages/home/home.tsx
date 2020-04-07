@@ -6,13 +6,14 @@ import Alert from 'react-bootstrap/Alert';
 import { API_KEY } from '../../config';
 import Movies from '../../components/movies/movies';
 import Search from '../../components/search/search';
+import Reveal from 'react-reveal/Reveal';
 
 interface Props {}
 interface State {
   movies: [];
   isLoading: boolean;
+  showAlert: boolean;
 }
-
 class Home extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props as any);
@@ -20,6 +21,7 @@ class Home extends React.Component<Props, State> {
     this.state = {
       movies: [],
       isLoading: false,
+      showAlert: false,
     };
   }
 
@@ -33,7 +35,9 @@ class Home extends React.Component<Props, State> {
           isLoading = false;
           this.setState({ isLoading });
 
-          const movies: any = response.results;
+          const movies: [] = response.results;
+          const showAlert = movies ? true : false
+          this.setState({ showAlert });
           this.setState({ movies });
         }
         return response;
@@ -44,30 +48,34 @@ class Home extends React.Component<Props, State> {
     return request;
   };
 
-  notice = () => {
-    return (
-      <Alert variant="warning" className="mx-auto">
-        Did not find anything in that search.
-      </Alert>
-    );
-  };
+  render () {
+    let movies: any = null;
+    let alert: any = null;
 
-  // searchResultComponent = () => {
-  //   console.log(this.state.movies);
-  //   if (this.state.movies) {
-  //     return <Movies movies={this.state.movies} />;
-  //   }
-  //   return this.notice();
-  // };
+    if (this.state.showAlert) {
+      alert = (
+        <Reveal effect="fadeInUp" effectOut="fadeOutLeft">
+          <div className="mx-auto">
+            <Alert variant="warning">Did not find anything in that search.</Alert>
+          </div>
+        </Reveal>
+      );
+    }
 
-  render() {
+    if (this.state.movies) {
+      movies = (
+        <Movies movies={this.state.movies} />
+      );
+    }
+
     return (
       <Container fluid>
         <Row>
           <Search handleSendRequest={this.getMovie} loading={this.state.isLoading} />
         </Row>
         <Row>
-          <Movies movies={this.state.movies} />
+          {movies}
+          {alert}
         </Row>
       </Container>
     );
